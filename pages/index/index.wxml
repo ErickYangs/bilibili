@@ -1,3 +1,36 @@
 <view class="main">
   <MyTitle></MyTitle>
+  <!-- 导航 -->
+  <view class="nav_wrap">
+    <scroll-view scroll-x="{{true}}" scroll-y="{{false}}" enable-flex="true" class="nav">
+      <view bind:tap="activeNav" data-index="{{index}}" class="nav_list {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="item.id">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="slides">
+    <swiper indicator-dots="{{true}}" indicator-active-color="#de698c" circular indicator-color="#ffffff" autoplay interval="2000">
+      <block wx:for="{{swiperData}}" wx:key="{{index}}">
+        <swiper-item>
+          <image mode="widthFix" src="{{item.imgSrc}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 视频列表 -->
+  <view class="video_wrap">
+    <navigator url="../detail/detail?id={{item.id}}" hover-class="none" class="video_item" wx:for="{{videoList}}" wx:key="{{index}}">
+      <!-- 图片区域 -->
+      <view class="video_img">
+        <image  src="{{item.imgSrc}}"></image>
+        <view class="number_wrap">
+          <view class="playCount">{{item.playCount}}</view>
+          <view class="commentCount">{{item.commentCount}}</view>
+        </view>
+      </view>
+      <!-- 标题区域 -->
+      <view class="main_title">{{item.desc}}</view>
+    </navigator>
+  </view>
 </view>

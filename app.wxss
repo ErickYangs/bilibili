@@ -1,3 +1,15 @@
-page, view, image, swiper, swiper-item, navigator, video {
+page,
+view,
+image,
+swiper,
+swiper-item,
+navigator,
+video {
   box-sizing: border-box;
+}
+page {
+  font-family: 'Roboto', 'PingFang SC Bold', 'PingFang SC', 'Microsoft Yahei',
+    Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #444444;
+  padding: 10rpx;
 }

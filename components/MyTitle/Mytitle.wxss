@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: #fb7299;
   color: #fff;
   border-radius: 10rpx;
   padding: 10rpx;
